@@ -1,8 +1,8 @@
 import psycopg2
 import pandas as pd
-import numpy as np
 import logging
 import os
+from pathlib import Path
 
 logging.basicConfig(
     level=logging.INFO,
@@ -16,12 +16,11 @@ logger = logging.getLogger(__name__)
 def get_conn():
     logger.info("Creating Database Connection...")
     conn = psycopg2.connect(
-        database="raw",
-        user="docker",
-        password="docker",
-        host="postgres",
-        # host="localhost",
-        port=5432,
+        database=os.getenv('POSTGRES_DB'),
+        user=os.getenv('POSTGRES_USER'),
+        password=os.getenv('POSTGRES_PASSWORD'),
+        host=os.getenv('POSTGRES_HOST'),
+        port=os.getenv('POSTGRES_PORT'),
     )
 
     cur = conn.cursor()
@@ -35,7 +34,7 @@ if __name__ == "__main__":
 
     logger.info("Creating tables...")
 
-    with open("scripts/sql/create_tables.sql", "r") as f:
+    with open(Path(__file__).resolve().parent / "sql/create_tables.sql", "r") as f:
         query = f.read()
 
     cur.execute(query)
@@ -54,7 +53,7 @@ if __name__ == "__main__":
 
     for file in files.keys():
         tablename = files[file]
-        data = pd.read_csv("data/{}".format(file))
+        data = pd.read_csv(Path(__file__).resolve().parent.parent / "data/{}".format(file))
 
         try:
             logger.info(

@@ -19,6 +19,12 @@ services:
     build: .
     volumes:
       - .:/app
+    environment:
+      - POSTGRES_PASSWORD=docker
+      - POSTGRES_USER=docker
+      - POSTGRES_DB=raw
+      - POSTGRES_HOST=postgres
+      - POSTGRES_PORT=5432
     working_dir: /app
     depends_on:
       postgres:
