@@ -1,7 +1,7 @@
 # `dbt` Tutorial
-[![Generic badge](https://img.shields.io/badge/dbt-1.1.0-blue.svg)](https://shields.io/)
-[![Generic badge](https://img.shields.io/badge/PostgreSQL-13-blue.svg)](https://shields.io/)
-[![Generic badge](https://img.shields.io/badge/Docker-20.10.6-blue.svg)](https://shields.io/)
+[![Generic badge](https://img.shields.io/badge/dbt-1.1.0-blue.svg)](https://docs.getdbt.com/dbt-cli/cli-overview)
+[![Generic badge](https://img.shields.io/badge/PostgreSQL-13-blue.svg)](https://www.postgresql.org/)
+[![Generic badge](https://img.shields.io/badge/Docker-20.10.6-blue.svg)](https://www.docker.com/)
 
 dbt tutorial taken from the different [dbt courses](https://courses.getdbt.com/collections). There you are going to find the following 5 courses:
 - [dbt Fundamentals](https://courses.getdbt.com/courses/fundamentals)
