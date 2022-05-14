@@ -1,4 +1,7 @@
 # `dbt` Tutorial
+[![Generic badge](https://img.shields.io/badge/dbt-1.1.0-blue.svg)](https://shields.io/)
+[![Generic badge](https://img.shields.io/badge/PostgreSQL-13-blue.svg)](https://shields.io/)
+
 dbt tutorial taken from the different [dbt courses](https://courses.getdbt.com/collections). There you are going to find the following 5 courses:
 - [dbt Fundamentals](https://courses.getdbt.com/courses/fundamentals)
 - [Jinja, Macros, Packages](https://courses.getdbt.com/courses/jinja-macros-packages)
@@ -148,7 +151,7 @@ to generate the docs, execute: `dbt docs generate --profiles-dir .`
 
 We have been using examples of Jinja, when using the `ref` function:
 ```
-{{ ref(stg_customers)}}
+{{ ref(stg_customers) }}
 ```
 
 There are three Jinja delimiters to be aware of in Jinja.
@@ -417,7 +420,7 @@ And by executing `dbt compile --profiles-dir .`, we will generate the actual sql
 |------|------|-------|------------------|
 | true | true | 99    | 100              |
 
-Here is a sumamry on teh steps to follow whenever we have to perform a migration
+Here is a summary on the steps to follow whenever we have to perform a migration
 
 **Step 1: Migrate Legacy Code 1:1**
 - Transfer your legacy code to your dbt project as is as a .sql file in the models folder
