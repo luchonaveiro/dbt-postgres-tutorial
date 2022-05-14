@@ -1,0 +1,23 @@
+config:
+    use_colors: True 
+jaffle_shop:
+  outputs:
+    dev:
+      type: postgres
+      threads: 1
+      host: localhost
+      port: 5432
+      user: "docker"
+      pass: "docker"
+      dbname: raw
+      schema: dev
+    prod:
+      type: postgres
+      threads: 1
+      host: localhost
+      port: 5432
+      user: "docker"
+      pass: "docker"
+      dbname: raw
+      schema: analytics
+  target: dev
