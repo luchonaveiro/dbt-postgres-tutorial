@@ -141,7 +141,23 @@ description
 {% enddocs %}
 ```
 you have to create a `.md` file with the documentation, and then reference it on the `model.yml` file, for example: `description: "{{ doc('order_status') }}"`
-to generate the docs, execute: `dbt docs generate --profiles-dir .`
+to generate the docs, execute: 
+```
+$ dbt docs generate --profiles-dir .
+```
+
+This command will create a `index.html` file on `target` directory. 
+
+We can run a `nginx` server to expose this webpage to see the data documentation (run this from inside `dbt-postgres/dbt_findamentals/jaffle_shop` directory). This will use the [dockersamples/static-site](https://hub.docker.com/r/dockersamples/static-site/) Docker image.
+```
+$ docker run --name dbt_docs --rm /
+-d -v $PWD/target:/usr/share/nginx/html /
+-p 8888:80 dockersamples/static-site
+
+$ dbt docs generate --profiles-dir .
+```
+
+This will generate the docs webpage available on `localhost:8888`, where we can see the all the define documentation, the dependencies, the lineage graph, and everything we need to make all the data model much more clear.
 
 ## Jinja, Macros, and Packages
 
