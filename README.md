@@ -4,7 +4,7 @@
 [![Generic badge](https://img.shields.io/badge/Python-3.7-blue.svg)](https://www.python.org/)
 [![Generic badge](https://img.shields.io/badge/Docker-20.10.6-blue.svg)](https://www.docker.com/)
 
-dbt tutorial taken from the different [dbt courses](https://courses.getdbt.com/collections). There you are going to find the following 5 courses:
+`dbt` tutorial taken from the different [dbt courses](https://courses.getdbt.com/collections), using `PostgreSQL` as the data warehouse. There you are going to find the following 5 courses:
 - [dbt Fundamentals](https://courses.getdbt.com/courses/fundamentals)
 - [Jinja, Macros, Packages](https://courses.getdbt.com/courses/jinja-macros-packages)
 - [Advanced Materializations](https://courses.getdbt.com/courses/advanced-materializations)
