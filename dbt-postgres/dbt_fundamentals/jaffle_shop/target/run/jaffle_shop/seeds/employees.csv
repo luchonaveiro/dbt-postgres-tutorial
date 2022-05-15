@@ -1,0 +1,10 @@
+
+    
+    create table "raw"."dev"."employees" ("employee_id" integer,"email" text,"customer_id" integer)
+  ;
+    -- dbt seed --
+    
+          insert into "raw"."dev"."employees" ("employee_id", "email", "customer_id") values
+          (%s,%s,%s),(%s,%s,%s),(%s,%s,%s),(%s,%s,%s)
+      
+  
