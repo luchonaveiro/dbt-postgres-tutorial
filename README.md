@@ -11,7 +11,7 @@
 - [Analyses and Seeds](https://courses.getdbt.com/courses/analyses-seeds)
 - [Refactoring SQL for Modularity](https://courses.getdbt.com/courses/refactoring-sql-for-modularity)
 
-For this tutorial, I adapted a little bit the `profiles.yml` file, to use a local PostgreSQL database, instead of using Redshift, Snowflake, BigQuery or Databricks
+For this tutorial, I adapted a little bit the `profiles.yml` file, to use a local `PostgreSQL` database, instead of using `Redshift`, `Snowflake`, `BigQuery` or `Databricks`.
 
 ## Project Set Up
 First we should download the [.csv files](https://gist.github.com/coapacetic/d3f20c2e727dc96b830c86da5ad93678) that we are going to insert to the DB. We should download this data on the `db/data` directory.
