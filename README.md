@@ -116,6 +116,7 @@ Changes en `dbt_project.yml`:
 - visualize the raw tables in the lineage on dbt Cloud UI
 
 ### Tests
+The tests are data validations that are performed after the data is loaded to the warehouse. On `dbt` there are two types of tests:
 - singular tests:
     - they are defined as a `.sql` file inside the `tests` directory
     - super specific tests that are olny valid for one model in particular
