@@ -181,6 +181,20 @@ There are three Jinja delimiters to be aware of in Jinja.
 
 A few helpful features of Jinja include dictionaries, lists, if/else statements, for loops, and macros.
 
+Also we can use variables, for instance, to use some values to filter. We can use the `{{ var ('...') }}` macro for that, and define the variable name on the  `dbt_project.yml` file:
+
+```
+vars:
+  # The `date` variable will be accessible in all resources
+  date: '2018-01-01'
+```
+
+Or we can pass it on the CLI, when running a `dbt` command:
+
+```
+$ dbt run --profiles-dir . --vars '{"date": "2018-01-01"}'
+```
+
 **Dictionaries** are data structures composed of key-value pairs.
 
 ```
